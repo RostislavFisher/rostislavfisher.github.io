@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/pm2-build/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Handlee&family=Happy+Monkey&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200;300;400;500;600;700" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+    <script>
+      // GitHub Pages SPA redirect hack
+      (function() {
+        var path = window.location.pathname;
+        var base = '/pm2-build/';
+        
+        if (path.startsWith(base)) {
+          var redirect = path.slice(base.length - 1);
+          var search = window.location.search;
+          
+          sessionStorage.setItem('redirect', redirect + search);
+          window.location.replace(base);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/pm2-build/src/main.js"></script>
+  </body>
+</html>
